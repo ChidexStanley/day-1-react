@@ -83,9 +83,59 @@ const people = [
     { id: 2, name: "kings" },
     { id: 3, name: "miracle" }
 ]
-console.log(people)
-const people2 = people.filter((person) => person.id == 2)
+console.log(people);
+const people2 = people.filter((person) => person.id == 2);
 
-console.log(people2)
+console.log(people2);
 
 // END OF DAY 1
+
+// DAY 2/20
+
+// spread operator
+//syntax for spread operator '[...]'
+
+const arr = [1, 2, 3];
+const arr2 = [...arr, 4]; 
+// let use filter with the spread operator
+const arr3 = [...arr2.filter(num => num !== 2), 7, 8];
+
+
+console.log(arr2);
+console.log(arr3);
+
+const employee = {
+    name: "chidex",
+    age: 38
+};
+
+const employeeUpdate = {
+    ...employee,
+    email: "chiderastanley272@gamil.com"
+};
+
+console.log(employeeUpdate);
+
+//  destruction
+// is a way of pulling out a value in an object
+
+const profile = {
+    user: 'john drill',
+    adress: {
+        street: '29 niger street',
+        city: 'fegge, Onitsha'
+    },
+    hobbies: ['tabletennis', 'music']
+};
+
+const {user} = profile;// destruction syntax
+
+console.log(user)
+
+const { adress, hobbies} = profile;
+
+console.log(adress.street,hobbies[0]);
+
+const { street, city } = profile.adress;
+
+console.log(street, city);

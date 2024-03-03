@@ -96,7 +96,7 @@ console.log(people2);
 //syntax for spread operator '[...]'
 
 const arr = [1, 2, 3];
-const arr2 = [...arr, 4]; 
+const arr2 = [...arr, 4];
 // let use filter with the spread operator
 const arr3 = [...arr2.filter(num => num !== 2), 7, 8];
 
@@ -128,14 +128,67 @@ const profile = {
     hobbies: ['tabletennis', 'music']
 };
 
-const {user} = profile;// destruction syntax
+const { user } = profile;// destruction syntax
 
 console.log(user)
 
-const { adress, hobbies} = profile;
+const { adress, hobbies } = profile;
 
-console.log(adress.street,hobbies[0]);
+console.log(adress.street, hobbies[0]);
 
 const { street, city } = profile.adress;
 
 console.log(street, city);
+
+// END OF DAY 2
+
+// DAY 3 (03/03/2024)
+
+// CLASS
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet() {
+        return `hello my name is ${this.name} and i am ${this.age}`;
+    }
+    
+}
+
+const person1 = new Person("john", 20);// entends the object
+const person2 = new Person("sara", 21);
+
+console.log(person1.name);
+console.log(person2.name);
+console.log(person1.age);
+console.log(person2.age);
+
+console.log(person2.greet());
+
+//SUBCLASSES
+//it means we can extend another class
+
+// create a customer and extend person class
+
+class Customer extends Person {
+    constructor(name, age, balance) {
+        super(name, age);
+        this.balance = balance;
+    }
+    
+    info() {
+        return `${this.name} owes $${this.balance}.00`;
+    }
+}
+
+const customer1 = new Customer('kelvin', 32, 388)
+
+console.log(customer1.info());
+
+// MODULES
+
+
+

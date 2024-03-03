@@ -155,7 +155,7 @@ class Person {
     greet() {
         return `hello my name is ${this.name} and i am ${this.age}`;
     }
-    
+
 }
 
 const person1 = new Person("john", 20);// entends the object
@@ -171,14 +171,14 @@ console.log(person2.greet());
 //SUBCLASSES
 //it means we can extend another class
 
-// create a customer and extend person class
+// create a customer and extend person class 
 
 class Customer extends Person {
     constructor(name, age, balance) {
         super(name, age);
         this.balance = balance;
     }
-    
+
     info() {
         return `${this.name} owes $${this.balance}.00`;
     }
